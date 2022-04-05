@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trivia Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
-<header class="Header">
-    <p>View HighScore</p>
-    <p>Time : <span>0</span></p>
-</header>
-
 <body>
-<section id="Main-Body">
-    <h2>Quiz Time!</h2>
-    <p id="main-paragragh">The Quiz starts when you click the "Start Quiz" button the Quiz will start and you will have 60-sec to answer questios. When you answer correctly you will gain point, if you answer incorrectly you will lose some time on the clock. At the end you can enter your initials for your HighScore.</p>
-    <h3>Have Fun and Enjoy!</h3>
-    <button id="button">
-        <p>Start!</p>
-</button>
-</section>
-
+    <main class="quizCard">
+        <header class="mainHeader">
+            <h1>Trivia Quiz!</h1>
+            <p>When your ready press start and the quiz will start. If you answer correctly, then you gain points, if you are incorrect, then you will lose time from the timer. Have Fun!</p>
+            <span id="timerArea"></span>
+        </header>
+        <section id="questionsContainer" class="hide">
+            <div id="question"></div>
+            <div id="answers" class="buttonArea"></div>
+        </section>
+        <section class="scores">
+            <div id="scoreArea" class="hide"></div>
+        </section>
+        <section class="controls">
+            <button class="start" id="startButton">START</button>
+            <button class="btn" id="showScoresButton">See High Scores!</button>
+            <br />
+            <div id="scoreArea" class="hide">
+                <span id="scoreDisplay"></span>
+                <input type="text" name="initials" id="initials" />
+                <button id="submitScore" class="submit">Save Score!</button>
+            </div>
+        </section>
+    </main>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
